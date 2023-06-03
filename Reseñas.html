@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+  <style>
+    .reseña {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+
+
+<body>
+<form onsubmit="guardarComentario(); return false;">
+  <h2>Agregar Reseña</h2>
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required><br><br>
+
+  <label for="calificacion">Calificación:</label>
+  <select id="calificacion" name="calificacion" required>
+    <option value="5">5 Estrellas</option>
+    <option value="4">4 Estrellas</option>
+    <option value="3">3 Estrellas</option>
+    <option value="2">2 Estrellas</option>
+    <option value="1">1 Estrella</option>
+  </select><br><br>
+
+  <label for="comentario">Comentario:</label><br>
+  <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea><br><br>
+
+  <input type="submit" value="Enviar Reseña">
+  <a href="viajes.html">Menu Principal </a>
+
+</form>
+
+<script>
+  function guardarComentario() {
+    var usuario = document.getElementById('nombre').value;
+    var calificacion = document.getElementById('calificacion').value;
+    var comentario = document.getElementById('comentario').value;
+
+    // Obtener los comentarios almacenados en el almacenamiento local
+    var comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
+
+    // Agregar el nuevo comentario al arreglo
+    comentarios.push({ usuario: usuario, calificacion: calificacion, comentario: comentario });
+
+    // Guardar los comentarios actualizados en el almacenamiento local
+    localStorage.setItem('comentarios', JSON.stringify(comentarios));
+
+    // Redireccionar a la otra página donde se mostrarán los comentarios
+    window.location.href = 'mostrar.html?_ijt=9vgo7ee0gpfmqaqgndi56re6rs&_ij_reload=RELOAD_ON_SAVE';
+  }
+</script>
+</body>
+</html>

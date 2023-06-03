@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guatemala Turismo</title>
+  <style>
+    /* Estilos CSS para la página */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #555;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+<header>
+  <h1>Guatemala Turismo</h1>
+</header>
+
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="mostrar.html?_ijt=9vgo7ee0gpfmqaqgndi56re6rs&_ij_reload=RELOAD_ON_SAVE">Mostrar Reseñas </a>
+
+</nav>
+
+<main>
+
+  <section id="lugares">
+  </section>
+  <section id="inicio">
+    <h2>Bienvenido a Guatemala Turismo</h2>
+    <p>Explora los mejores lugares turísticos, encuentra los hoteles más encantadores, disfruta de la deliciosa gastronomía en restaurantes, bares y cafés, y descubre opciones de transporte para tu viaje en Guatemala.</p>
+  </section>
+
+  <li><a href="LugaresAntigua.html">Antigua Guatemala</a></li>
+  <img src="https://dataexport.com.gt/wp-content/uploads/2021/09/Exportaciones-12-1000x600.jpg" alt="Antigua Guatemala"width="700" height="300">
+  <div class="img-container">
+  </div>
+
+  <li><a href="LugaresSolola.html">Solola</a></li>
+  <img src="https://aprende.guatemala.com/wp-content/uploads/2019/09/Departamento-de-Solol%C3%A1-Guatemala.jpg" alt="Solola"width="700" height="300">
+  <div class="img-container">
+  </div>
+
+  <li><a href="LugaresQuiche.html">Quiche</a></li>
+  <img src="https://i.ytimg.com/vi/672Tzc5S2nw/maxresdefault.jpg" alt="Quiché"width="700" height="300">
+  <div class="img-container">
+  </div>
+
+
+  <li><a href="Jalapa.html">Jalapa</a></li>
+  <img src="https://aprende.guatemala.com/wp-content/uploads/2019/05/Departamento-de-Jalapa-Guatemala-2.jpg" alt="Jalapa"width="700" height="300">
+  <div class="img-container">
+  </div>
+  <button onClick="goToTop()" id="goToTopButton">Volver arriba</button>
+  <script>
+    // Función para desplazarse hacia arriba de la página
+    function goToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Mostrar u ocultar el botón basado en la posición de desplazamiento
+    window.addEventListener('scroll', function() {
+      var goToTopButton = document.getElementById('goToTopButton');
+      if (window.scrollY > 200) {
+        goToTopButton.style.display = 'block';
+      } else {
+        goToTopButton.style.display = 'none';
+      }
+    });
+  </script>
+
+  <!-- Resto del código HTML -->
+
+</main>
+</body>
+</html>
